@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manish L M — Video Editor & Cinematic Storyteller. Reels, cinematic editing, color grading and motion graphics.">
+  <title>MONICINEFX | Manish L M — Video Editor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#050505;--card:#0d0d0d;--text:#f5f5f5;--muted:#9b9b9b;--red:#e50914;--line:#222;--max:1180px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(92%,var(--max));margin:auto}
+    nav{position:fixed;top:0;left:0;width:100%;z-index:50;background:rgba(5,5,5,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .navin{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:900;letter-spacing:2px}.logo span{color:var(--red)}
+    .links{display:flex;gap:28px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+    .links a{color:#ddd;transition:.25s}.links a:hover{color:var(--red)}
+    .menu{display:none;background:none;border:0;color:white;font-size:25px}
+    .hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+    .hero:before{content:"";position:absolute;width:620px;height:620px;right:-220px;top:80px;background:radial-gradient(circle,rgba(229,9,20,.22),transparent 68%);filter:blur(10px)}
+    .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050505 0%,rgba(5,5,5,.82) 45%,rgba(5,5,5,.2) 100%);pointer-events:none}
+    .hero-content{position:relative;z-index:2;padding-top:75px;max-width:850px}
+    .eyebrow{color:var(--red);font-size:13px;font-weight:800;letter-spacing:4px;text-transform:uppercase;margin-bottom:20px}
+    h1{font-size:clamp(55px,9vw,120px);line-height:.88;letter-spacing:-6px;font-weight:900}
+    h1 .outline{color:transparent;-webkit-text-stroke:1px #eee}
+    .hero p{max-width:650px;color:#bbb;font-size:18px;margin:30px 0}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{padding:14px 22px;border:1px solid #333;border-radius:3px;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px;transition:.25s}
+    .btn.primary{background:var(--red);border-color:var(--red)}.btn:hover{transform:translateY(-3px);border-color:var(--red)}
+    .scroll{position:absolute;bottom:30px;left:0;z-index:2;color:#777;font-size:11px;letter-spacing:3px;text-transform:uppercase}
+    section{padding:105px 0;border-top:1px solid var(--line)}
+    .section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:45px}
+    .kicker{color:var(--red);font-size:11px;font-weight:900;letter-spacing:3px;text-transform:uppercase}
+    h2{font-size:clamp(35px,5vw,62px);line-height:1;letter-spacing:-3px;margin-top:8px}
+    .section-head p{color:var(--muted);max-width:420px;font-size:14px}
+    .reel{aspect-ratio:16/9;background:linear-gradient(135deg,#151515,#090909);border:1px solid #292929;display:grid;place-items:center;position:relative;overflow:hidden}
+    .reel:before{content:"SHOWREEL";position:absolute;font-size:clamp(55px,12vw,160px);font-weight:900;color:#111;letter-spacing:-8px}
+    .play{width:76px;height:76px;border-radius:50%;background:var(--red);display:grid;place-items:center;position:relative;z-index:1;box-shadow:0 0 60px rgba(229,9,20,.28);font-size:25px;padding-left:4px}
+    .reel-note{text-align:center;color:#777;font-size:11px;margin-top:12px}
+    .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .work{background:var(--card);border:1px solid #1e1e1e;min-height:290px;position:relative;overflow:hidden;transition:.3s}
+    .work:hover{transform:translateY(-5px);border-color:#444}
+    .thumb{height:260px;background:linear-gradient(135deg,#171717,#090909);display:grid;place-items:center;color:#333;font-weight:900;font-size:50px;letter-spacing:-3px}
+    .work:nth-child(2) .thumb{background:linear-gradient(135deg,#1c0a0b,#0b0808)}
+    .work:nth-child(3) .thumb{background:linear-gradient(135deg,#111,#1a0d0e)}
+    .work:nth-child(4) .thumb{background:linear-gradient(135deg,#18090a,#111)}
+    .work-info{padding:18px 20px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .work-info h3{font-size:16px}.work-info span{color:var(--red);font-size:10px;font-weight:800;letter-spacing:1px}
+    .about{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:start}
+    .about-photo{min-height:450px;background:linear-gradient(145deg,#151515,#080808);border:1px solid #222;display:grid;place-items:center;color:#333;font-size:80px;font-weight:900}
+    .about-copy p{color:#aaa;font-size:17px;max-width:700px;margin:20px 0}
+    .software{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}.tag{border:1px solid #292929;padding:9px 12px;color:#ddd;font-size:12px}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#242424;border:1px solid #242424}
+    .service{background:var(--bg);padding:30px;min-height:220px}.num{color:var(--red);font-weight:900;font-size:12px}.service h3{margin:42px 0 10px;font-size:20px}.service p{color:#777;font-size:13px}
+    .contact{padding-bottom:130px}.contact-box{border:1px solid #292929;padding:55px;background:linear-gradient(120deg,#0c0c0c,#080808);position:relative;overflow:hidden}
+    .contact-box:after{content:"";position:absolute;width:350px;height:350px;right:-150px;top:-150px;background:radial-gradient(circle,rgba(229,9,20,.25),transparent 70%)}
+    .contact h2{max-width:800px}.contact-actions{margin-top:35px;display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:1}
+    footer{border-top:1px solid var(--line);padding:25px 0;color:#666;font-size:11px;display:flex;justify-content:space-between;gap:20px}
+    .red{color:var(--red)}
+    @media(max-width:800px){
+      .links{display:none}.menu{display:block}.navin{height:65px}
+      .hero{min-height:90vh}.hero-content{padding-top:70px}h1{letter-spacing:-4px}
+      .section-head{display:block}.section-head p{margin-top:20px}.work-grid{grid-template-columns:1fr}
+      .about{grid-template-columns:1fr;gap:30px}.about-photo{min-height:300px}
+      .services{grid-template-columns:1fr 1fr}.service{min-height:190px;padding:22px}.service h3{margin-top:25px}
+      section{padding:75px 0}.contact-box{padding:32px 22px}footer{display:block}footer div+div{margin-top:8px}
+    }
+    @media(max-width:500px){.services{grid-template-columns:1fr}.thumb{height:210px}.work{min-height:240px}.hero p{font-size:15px}}
+  </style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="logo" href="#home">MONI<span>CINEFX</span></a>
+  <div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+  <button class="menu" aria-label="Menu">☰</button>
+</div></nav>
+
+<main>
+<section class="hero" id="home"><div class="container hero-content">
+  <div class="eyebrow">Manish L M / Video Editor</div>
+  <h1>EDIT.<br><span class="outline">CREATE.</span><br>IMPACT.</h1>
+  <p>I turn raw footage into cinematic visual stories — from high-energy reels to documentary edits, color grading and motion graphics.</p>
+  <div class="buttons"><a class="btn primary" href="#reel">Watch Showreel</a><a class="btn" href="#contact">Hire Me</a></div>
+</div><div class="container scroll">↓ Scroll to explore</div></section>
+
+<section id="reel"><div class="container">
+  <div class="section-head"><div><div class="kicker">01 / Showreel</div><h2>MY BEST WORK.</h2></div><p>Replace the placeholder below with your 2026 showreel. Keep it around 20–40 seconds and start with your strongest shots.</p></div>
+  <div class="reel"><a class="play" href="#" onclick="alert('Replace this button with your YouTube/Vimeo showreel link.');return false;">▶</a></div>
+  <div class="reel-note">SHOWREEL VIDEO PLACEHOLDER — ADD YOUR VIDEO LINK</div>
+</div></section>
+
+<section id="work"><div class="container">
+  <div class="section-head"><div><div class="kicker">02 / Selected Work</div><h2>RECENT EDITS.</h2></div><p>Replace each placeholder thumbnail with a frame from your strongest projects.</p></div>
+  <div class="work-grid">
+    <article class="work"><div class="thumb">01</div><div class="work-info"><h3>Cinematic Edit</h3><span>WATCH →</span></div></article>
+    <article class="work"><div class="thumb">02</div><div class="work-info"><h3>Reels & Shorts</h3><span>WATCH →</span></div></article>
+    <article class="work"><div class="thumb">03</div><div class="work-info"><h3>Documentary</h3><span>WATCH →</span></div></article>
+    <article class="work"><div class="thumb">04</div><div class="work-info"><h3>Color & Motion</h3><span>WATCH →</span></div></article>
+  </div>
+</div></section>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div><div class="kicker">03 / About</div><h2>THE EDITOR<br>BEHIND THE CUT.</h2></div></div>
+  <div class="about">
+    <div class="about-photo">MLM</div>
+    <div class="about-copy">
+      <p>I'm <strong>Manish L M</strong>, a video editor and visual storyteller focused on creating edits that feel cinematic, engaging and memorable.</p>
+      <p>I work across short-form content, cinematic edits, documentary storytelling, color grading and motion graphics — always focusing on pacing, emotion and visual impact.</p>
+      <div class="kicker">Tools</div>
+      <div class="software"><span class="tag">Adobe Premiere Pro</span><span class="tag">After Effects</span><span class="tag">DaVinci Resolve</span><span class="tag">Photoshop</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="services"><div class="container">
+  <div class="section-head"><div><div class="kicker">04 / Services</div><h2>WHAT I DO.</h2></div><p>Professional editing services for creators, brands and storytellers.</p></div>
+  <div class="services">
+    <div class="service"><div class="num">01</div><h3>Video Editing</h3><p>Cinematic pacing, clean cuts, storytelling and sound design.</p></div>
+    <div class="service"><div class="num">02</div><h3>Reels & Shorts</h3><p>High-retention short-form edits built for social media.</p></div>
+    <div class="service"><div class="num">03</div><h3>Color Grading</h3><p>Professional correction and creative cinematic looks.</p></div>
+    <div class="service"><div class="num">04</div><h3>Motion Graphics</h3><p>Titles, transitions, animations and visual effects.</p></div>
+  </div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+  <div class="contact-box">
+    <div class="kicker">05 / Contact</div><h2>HAVE A PROJECT?<br><span class="red">LET'S CREATE.</span></h2>
+    <div class="contact-actions">
+      <a class="btn primary" href="mailto:moni22886677@gmail.com">Email Me</a>
+      <a class="btn" href="https://wa.me/918123812644" target="_blank">WhatsApp</a>
+      <a class="btn" href="https://www.instagram.com/_m.o.n.i_18/" target="_blank">Instagram</a>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer class="container"><div>© 2026 MONICINEFX / Manish L M</div><div>VIDEO EDITOR <span class="red">●</span> CINEMATIC STORYTELLER</div></footer>
+</body>
+</html>
