@@ -45,7 +45,10 @@
     .work-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
     .work{background:var(--card);border:1px solid #1e1e1e;min-height:290px;position:relative;overflow:hidden;transition:.3s}
     .work:hover{transform:translateY(-5px);border-color:#444}
-    .thumb{height:260px;background:linear-gradient(135deg,#171717,#090909);display:grid;place-items:center;color:#333;font-weight:900;font-size:50px;letter-spacing:-3px}
+    .thumb{height:260px;background:#111;display:block;overflow:hidden}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+    .work:hover .thumb img{transform:scale(1.05)}
+    .work>a{display:block;color:inherit;text-decoration:none}
     .work:nth-child(2) .thumb{background:linear-gradient(135deg,#1c0a0b,#0b0808)}
     .work:nth-child(3) .thumb{background:linear-gradient(135deg,#111,#1a0d0e)}
     .work:nth-child(4) .thumb{background:linear-gradient(135deg,#18090a,#111)}
